@@ -27,7 +27,7 @@ const Location = () => {
               <CardContent>
                 {/* Simulação de mapa - em produção seria integrado com Google Maps */}
                 <div className="w-full h-80 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+                  <div className="absolute inset-0 opacity-20"></div>
                   <div className="text-center z-10">
                     <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                       <span className="text-white text-2xl">📍</span>
@@ -79,23 +79,28 @@ const Location = () => {
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">🚇 Transporte Público</h4>
                     <p className="text-sm text-gray-600">
-                      Estação Sé (Linhas Azul e Vermelha) - 300m<br />
+                      Estação Sé (Linhas Azul e Vermelha) - 300m
+                      <br />
                       Estação São Bento (Linha Azul) - 500m
                     </p>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">🚗 De Carro</h4>
                     <p className="text-sm text-gray-600">
-                      Fácil acesso pelas principais vias:<br />
-                      - Viaduto do Chá<br />
-                      - Rua da Consolação<br />
+                      Fácil acesso pelas principais vias:
+                      <br />
+                      - Viaduto do Chá
+                      <br />
+                      - Rua da Consolação
+                      <br />
                       - Avenida São João
                     </p>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">🅿️ Estacionamento</h4>
                     <p className="text-sm text-gray-600">
-                      Estacionamento próprio disponível para clientes<br />
+                      Estacionamento próprio disponível para clientes
+                      <br />
                       (2 horas gratuitas)
                     </p>
                   </div>
