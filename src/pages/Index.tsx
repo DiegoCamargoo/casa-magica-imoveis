@@ -42,7 +42,7 @@ const Index = () => {
       area: "200m²",
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=500&q=60"
     }
-  ];
+  ]);
 
   const stats = [
     { number: "15+", label: "Anos de Experiência", icon: Award },
