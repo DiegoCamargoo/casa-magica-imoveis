@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { MapPin, Bed, Bath, Square, Heart } from "lucide-react";
 
 interface Property {
   id: number;
@@ -21,47 +22,68 @@ interface PropertyCardProps {
 
 export const PropertyCard = ({ property }: PropertyCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group border-0 shadow-lg">
       <div className="relative">
         <img
           src={property.image}
           alt={property.title}
-          className="w-full h-48 object-cover"
+          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        
         <Badge 
-          className={`absolute top-3 left-3 font-montserrat ${
-            property.type === 'venda' ? 'bg-green-600' : 'bg-andrade-gold-600'
+          className={`absolute top-4 left-4 font-montserrat shadow-lg ${
+            property.type === 'venda' 
+              ? 'bg-green-600 hover:bg-green-700' 
+              : 'bg-andrade-gold-600 hover:bg-andrade-gold-700'
           }`}
         >
           {property.type === 'venda' ? 'Venda' : 'Aluguel'}
         </Badge>
+        
+        <button className="absolute top-4 right-4 w-10 h-10 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg">
+          <Heart className="h-5 w-5 text-gray-600 hover:text-andrade-gold-600 transition-colors" />
+        </button>
+        
+        <div className="absolute bottom-4 left-4 text-white">
+          <h3 className="text-xl font-kophita font-bold mb-1">
+            {property.title}
+          </h3>
+          <div className="flex items-center text-white/90 font-montserrat">
+            <MapPin className="h-4 w-4 mr-1" />
+            <span className="text-sm">{property.neighborhood}</span>
+          </div>
+        </div>
       </div>
       
       <CardContent className="p-6">
-        <h3 className="text-lg font-kophita font-semibold text-gray-900 mb-2">
-          {property.title}
-        </h3>
-        
-        <p className="text-2xl font-kophita font-bold text-andrade-gold-600 mb-3">
-          {property.price}
-        </p>
-        
-        <p className="text-gray-600 mb-4 font-montserrat">
-          📍 {property.neighborhood}
-        </p>
-        
-        <div className="flex justify-between text-sm text-gray-500 mb-4 font-montserrat">
-          <span>🛏️ {property.bedrooms} quartos</span>
-          <span>🚿 {property.bathrooms} banheiros</span>
-          <span>📐 {property.area}</span>
+        <div className="mb-4">
+          <p className="text-3xl font-kophita font-bold text-andrade-gold-600">
+            {property.price}
+          </p>
         </div>
         
-        <div className="flex space-x-2">
-          <Button className="flex-1 gradient-primary text-white font-montserrat">
+        <div className="grid grid-cols-3 gap-4 mb-6 text-gray-600">
+          <div className="flex items-center justify-center p-3 bg-gray-50 rounded-lg">
+            <Bed className="h-4 w-4 mr-2 text-andrade-gold-600" />
+            <span className="text-sm font-montserrat font-medium">{property.bedrooms}</span>
+          </div>
+          <div className="flex items-center justify-center p-3 bg-gray-50 rounded-lg">
+            <Bath className="h-4 w-4 mr-2 text-andrade-gold-600" />
+            <span className="text-sm font-montserrat font-medium">{property.bathrooms}</span>
+          </div>
+          <div className="flex items-center justify-center p-3 bg-gray-50 rounded-lg">
+            <Square className="h-4 w-4 mr-2 text-andrade-gold-600" />
+            <span className="text-sm font-montserrat font-medium">{property.area}</span>
+          </div>
+        </div>
+        
+        <div className="space-y-3">
+          <Button className="w-full gradient-primary text-white font-montserrat font-medium">
             Ver Detalhes
           </Button>
-          <Button variant="outline" className="flex-1 font-montserrat border-andrade-gold-500 text-andrade-gold-600 hover:bg-andrade-gold-50">
-            Contato
+          <Button variant="outline" className="w-full font-montserrat border-andrade-gold-500 text-andrade-gold-600 hover:bg-andrade-gold-50">
+            Agendar Visita
           </Button>
         </div>
       </CardContent>
