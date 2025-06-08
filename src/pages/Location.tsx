@@ -32,7 +32,7 @@ const Location = () => {
                       <span className="text-white text-2xl">📍</span>
                     </div>
                     <div className="bg-white/90 p-4 rounded-lg shadow-md">
-                      <p className="font-kophita font-semibold text-gray-800">Andrade Jr</p>
+                      <p className="font-kophita font-semibold text-gray-800">Andrade</p>
                       <p className="text-sm text-gray-600 font-montserrat">Rua das Flores, 123 - Centro</p>
                     </div>
                   </div>

@@ -27,12 +27,12 @@ export const Header = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/d37240a8-ed47-4433-86b6-a0b3223f6dcf.png" 
-              alt="Andrade Jr Imóveis"
+              alt="Andrade Lançamentos Imobiliários"
               className="w-10 h-10 object-contain"
             />
             <div className="flex flex-col">
               <span className="text-lg font-kophita font-bold text-andrade-gold-500">
-                Andrade Jr
+                Andrade
               </span>
               <span className="text-xs font-montserrat text-gray-600 -mt-1">
                 Lançamentos Imobiliários
