@@ -24,11 +24,20 @@ export const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">I</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/d37240a8-ed47-4433-86b6-a0b3223f6dcf.png" 
+              alt="Andrade Jr Imóveis"
+              className="w-10 h-10 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="text-lg font-kophita font-bold text-andrade-gold-500">
+                Andrade Jr
+              </span>
+              <span className="text-xs font-montserrat text-gray-600 -mt-1">
+                Lançamentos Imobiliários
+              </span>
             </div>
-            <span className="text-xl font-bold text-gray-900">ImóvelPrime</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -37,10 +46,10 @@ export const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-sm font-medium font-montserrat transition-colors ${
                   isActiveLink(item.href)
-                    ? "text-blue-600 bg-blue-50"
-                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                    ? "text-andrade-gold-600 bg-andrade-gold-50"
+                    : "text-gray-700 hover:text-andrade-gold-600 hover:bg-gray-50"
                 }`}
               >
                 {item.name}
@@ -51,12 +60,12 @@ export const Header = () => {
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="font-montserrat border-andrade-gold-500 text-andrade-gold-600 hover:bg-andrade-gold-50">
                 Login
               </Button>
             </Link>
             <Link to="/cadastro">
-              <Button size="sm" className="gradient-primary text-white">
+              <Button size="sm" className="gradient-primary text-white font-montserrat">
                 Cadastrar
               </Button>
             </Link>
@@ -83,10 +92,10 @@ export const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3 py-2 rounded-md text-sm font-medium font-montserrat transition-colors ${
                     isActiveLink(item.href)
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "text-andrade-gold-600 bg-andrade-gold-50"
+                      : "text-gray-700 hover:text-andrade-gold-600 hover:bg-gray-50"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -95,12 +104,12 @@ export const Header = () => {
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t">
                 <Link to="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button variant="outline" size="sm" className="w-full">
+                  <Button variant="outline" size="sm" className="w-full font-montserrat border-andrade-gold-500 text-andrade-gold-600 hover:bg-andrade-gold-50">
                     Login
                   </Button>
                 </Link>
                 <Link to="/cadastro" onClick={() => setIsMenuOpen(false)}>
-                  <Button size="sm" className="gradient-primary text-white w-full">
+                  <Button size="sm" className="gradient-primary text-white w-full font-montserrat">
                     Cadastrar
                   </Button>
                 </Link>

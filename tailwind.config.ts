@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'kophita': ['Kophita', 'serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +66,31 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Cores da marca Andrade
+				'andrade-gold': {
+					'50': '#fefce8',
+					'100': '#fef9c3',
+					'200': '#fef08a',
+					'300': '#fde047',
+					'400': '#facc15',
+					'500': '#d97706', // Dourado principal
+					'600': '#b45309',
+					'700': '#92400e',
+					'800': '#78350f',
+					'900': '#451a03',
+				},
+				'andrade-yellow': {
+					'50': '#fffbeb',
+					'100': '#fef3c7',
+					'200': '#fde68a',
+					'300': '#fcd34d',
+					'400': '#fbbf24', // Amarelo principal
+					'500': '#f59e0b',
+					'600': '#d97706',
+					'700': '#b45309',
+					'800': '#92400e',
+					'900': '#78350f',
 				}
 			},
 			borderRadius: {
